@@ -26,17 +26,12 @@
     <modelVersion>4.0.0</modelVersion>
 
     <groupId>com.darrenforsythe</groupId>
-    <artifactId>mocking-network-io</artifactId>
+    <artifactId>testing-databases</artifactId>
     <version>0.0.1-SNAPSHOT</version>
-    <packaging>pom</packaging>
 
-    <name>Mocking Network IO</name>
-    <description>Repository to accompany blog posts on mocking networking IO</description>
-    <url>https://darrenforsythe.dev/blog</url>
-    <modules>
-        <module>repositories</module>
-    </modules>
-
+    <name>Testing Databases</name>
+    <description>Repository to accompany blog posts on some database testing</description>
+    <url>https://darrenforsythe.dev/blog/testing-databases</url>
     <properties>
         <maven-compiler-plugin.version>3.8.1</maven-compiler-plugin.version>
         <maven.compiler.source>11</maven.compiler.source>
@@ -69,6 +64,41 @@
             </dependency>
         </dependencies>
     </dependencyManagement>
+    <dependencies>
+        <dependency>
+            <groupId>org.liquibase</groupId>
+            <artifactId>liquibase-core</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-data-jpa</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>com.h2database</groupId>
+            <artifactId>h2</artifactId>
+            <scope>runtime</scope>
+        </dependency>
+        <dependency>
+            <groupId>mysql</groupId>
+            <artifactId>mysql-connector-java</artifactId>
+            <scope>runtime</scope>
+        </dependency>
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-test</artifactId>
+            <scope>test</scope>
+        </dependency>
+        <dependency>
+            <groupId>org.testcontainers</groupId>
+            <artifactId>mysql</artifactId>
+            <scope>test</scope>
+        </dependency>
+        <dependency>
+            <groupId>org.testcontainers</groupId>
+            <artifactId>junit-jupiter</artifactId>
+            <scope>test</scope>
+        </dependency>
+    </dependencies>
 
     <build>
         <pluginManagement>
