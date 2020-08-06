@@ -26,22 +26,49 @@
     <modelVersion>4.0.0</modelVersion>
 
     <groupId>com.darrenforsythe</groupId>
-    <artifactId>java-template</artifactId>
+    <artifactId>mocking-network-io</artifactId>
     <version>0.0.1-SNAPSHOT</version>
+    <packaging>pom</packaging>
 
-    <name>Java Template</name>
+    <name>Mocking Network IO</name>
+    <description>Repository to accompany blog posts on mocking networking IO</description>
+    <url>https://darrenforsythe.dev/blog/TODO</url>
+    <modules>
+        <module>repositories</module>
+    </modules>
 
     <properties>
         <maven-compiler-plugin.version>3.8.1</maven-compiler-plugin.version>
-        <maven.compiler.source>1.8</maven.compiler.source>
-        <maven.compiler.target>1.8</maven.compiler.target>
+        <maven.compiler.source>11</maven.compiler.source>
+        <maven.compiler.target>11</maven.compiler.target>
         <plugin-fmt-maven.version>2.10</plugin-fmt-maven.version>
         <plugin-git-code-format-maven.version>2.5</plugin-git-code-format-maven.version>
         <plugin-sortpom-maven.version>2.11.0</plugin-sortpom-maven.version>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
+        <spring-boot.version>2.3.2.RELEASE</spring-boot.version>
         <surefire.version>2.22.2</surefire.version>
+        <testcontainers.version>1.14.2</testcontainers.version>
     </properties>
+
+    <dependencyManagement>
+        <dependencies>
+            <dependency>
+                <groupId>org.springframework.boot</groupId>
+                <artifactId>spring-boot-dependencies</artifactId>
+                <version>${spring-boot.version}</version>
+                <type>pom</type>
+                <scope>import</scope>
+            </dependency>
+            <dependency>
+                <groupId>org.testcontainers</groupId>
+                <artifactId>testcontainers-bom</artifactId>
+                <version>${testcontainers.version}</version>
+                <type>pom</type>
+                <scope>import</scope>
+            </dependency>
+        </dependencies>
+    </dependencyManagement>
 
     <build>
         <pluginManagement>
