@@ -32,7 +32,7 @@
 
     <name>Mocking Network IO</name>
     <description>Repository to accompany blog posts on mocking networking IO</description>
-    <url>https://darrenforsythe.dev/blog/TODO</url>
+    <url>https://darrenforsythe.dev/blog</url>
     <modules>
         <module>repositories</module>
     </modules>

@@ -1,0 +1,13 @@
+---
+spring:
+  profiles: h2
+  liquibase:
+    enabled: false
+---
+spring:
+  profiles: testcontainers
+  liquibase:
+    change-log: classpath:db/changelog/changelog-master.xml
+  jpa:
+    hibernate:
+      ddl-auto: validate
